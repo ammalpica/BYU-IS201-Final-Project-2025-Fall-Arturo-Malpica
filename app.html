@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web App | Number Guessing Game</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; background: #f6f8fb; margin: 0; color: #1f2933; }
+    header { background: #00274f; color: white; padding: 16px; }
+    a { color: white; text-decoration: none; font-weight: bold; margin-right: 12px; }
+    main { max-width: 720px; margin: 18px auto; padding: 0 16px; }
+    .card { background: white; border: 1px solid #dbe2ef; border-radius: 12px; padding: 16px; box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06); }
+    input { padding: 10px; width: 140px; border-radius: 8px; border: 1px solid #cbd2d9; }
+    button { padding: 10px 14px; border: 0; border-radius: 8px; background: #0b3d91; color: white; cursor: pointer; }
+    button:hover { opacity: 0.92; }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .status { margin-top: 12px; padding: 12px; background: #fff7db; border-left: 6px solid #f1c40f; border-radius: 8px; }
+    .muted { color: #52606d; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="row" style="justify-content:space-between;">
+      <div><strong>Web App Demo</strong></div>
+      <div>
+        <a href="index.html">Professional Home</a>
+        <a href="scratch/scratch.html">Scratch Page</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="card">
+      <h1>Number Guessing Game</h1>
+      <p class="muted">Guess the secret number (1–100). This is a single-file app (HTML + CSS + JS).</p>
+
+      <div class="row">
+        <input id="guess" type="number" min="1" max="100" placeholder="1–100" />
+        <button id="btnGuess">Guess</button>
+        <button id="btnReset" style="background:#52606d;">Reset</button>
+      </div>
+
+      <div id="status" class="status">Enter a guess to begin.</div>
+      <p class="muted" id="tries"></p>
+    </div>
+  </main>
+
+  <script>
+    let secret = randomInt(1, 100);
+    let attempts = 0;
+
+    const guessEl = document.getElementById("guess");
+    const statusEl = document.getElementById("status");
+    const triesEl = document.getElementById("tries");
+
+    document.getElementById("btnGuess").addEventListener("click", submitGuess);
+    document.getElementById("btnReset").addEventListener("click", resetGame);
+    guessEl.addEventListener("keydown", (e) => { if (e.key === "Enter") submitGuess(); });
+
+    function submitGuess() {
+      const val = Number(guessEl.value);
+      if (!Number.isInteger(val) || val < 1 || val > 100) {
+        statusEl.textContent = "Please enter a whole number between 1 and 100.";
+        return;
+      }
+
+      attempts++;
+      triesEl.textContent = `Attempts: ${attempts}`;
+
+      if (val === secret) {
+        statusEl.textContent = `✅ Correct! ${val} is the secret number. Click Reset to play again.`;
+      } else if (val < secret) {
+        statusEl.textContent = "Too low. Try a higher number.";
+      } else {
+        statusEl.textContent = "Too high. Try a lower number.";
+      }
+
+      guessEl.select();
+      guessEl.focus();
+    }
+
+    function resetGame() {
+      secret = randomInt(1, 100);
+      attempts = 0;
+      guessEl.value = "";
+      triesEl.textContent = "";
+      statusEl.textContent = "Game reset. Enter a guess to begin.";
+      guessEl.focus();
+    }
+
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+  </script>
+</body>
+</html>

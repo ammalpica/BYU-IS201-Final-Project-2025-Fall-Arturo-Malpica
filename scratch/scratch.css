@@ -1,0 +1,59 @@
+/* Custom background color (requirement) */
+body {
+  background: #f2f6ff;
+  font-family: Arial, Helvetica, sans-serif; /* font family requirement */
+  color: #1f2933; /* font color requirement */
+  margin: 0;
+}
+
+/* Style definition #1 */
+header {
+  background: #0b3d91;
+  color: white;
+  padding: 18px 16px;
+}
+
+/* Style definition #2 */
+nav a {
+  color: white;
+  margin-right: 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style definition #3 */
+.section {
+  background: white;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #dbe2ef;
+}
+
+/* Style definition #4 */
+.callout {
+  background: #fff7db;
+  border-left: 6px solid #f1c40f;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* Div positioning helpers (you need at least 3 divs in the HTML) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+img.custom-photo {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 10px;
+  border: 2px solid #dbe2ef;
+}
+
+footer {
+  padding: 16px;
+  text-align: center;
+  color: #52606d;
+}
