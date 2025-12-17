@@ -1,19 +1,16 @@
-/* Custom background color (requirement) */
 body {
   background: #f2f6ff;
-  font-family: Arial, Helvetica, sans-serif; /* font family requirement */
-  color: #1f2933; /* font color requirement */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2933;
   margin: 0;
 }
 
-/* Style definition #1 */
 header {
   background: #0b3d91;
   color: white;
   padding: 18px 16px;
 }
 
-/* Style definition #2 */
 nav a {
   color: white;
   margin-right: 12px;
@@ -21,7 +18,6 @@ nav a {
   font-weight: bold;
 }
 
-/* Style definition #3 */
 .section {
   background: white;
   margin: 16px;
@@ -30,7 +26,6 @@ nav a {
   border: 1px solid #dbe2ef;
 }
 
-/* Style definition #4 */
 .callout {
   background: #fff7db;
   border-left: 6px solid #f1c40f;
@@ -38,7 +33,6 @@ nav a {
   border-radius: 8px;
 }
 
-/* Div positioning helpers (you need at least 3 divs in the HTML) */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -56,4 +50,8 @@ footer {
   padding: 16px;
   text-align: center;
   color: #52606d;
+}
+
+@media (max-width: 820px) {
+  .grid { grid-template-columns: 1fr; }
 }

@@ -3,146 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Scratch Page | Hobby + HTML/CSS Skills</title>
+  <title>Scratch Page | HTML + CSS Skills</title>
   <link rel="stylesheet" href="scratch.css" />
 </head>
 
 <body>
 
-  <header>
-    <h1>Scratch Page: My Hobby / Passion</h1>
-    <nav>
-      <!-- Navigation back to professional pages (requirement) -->
-      <a href="../index.html">Professional Home</a>
-      <a href="../resume.html">Résumé</a>
-      <a href="../projects.html">Projects</a>
+<header>
+  <h1 id="top">Scratch Page: HTML &amp; CSS Demonstration</h1>
+  <nav>
+    <a href="../index.html">Professional Home</a>
+    <a href="../resume.html">Résumé</a>
+    <a href="../projects.html">Projects</a>
+    <a href="../app.html">Web App</a>
+  </nav>
+</header>
 
-      <!-- Link to the AI web app (requirement) -->
-      <a href="../app.html">My Web App</a>
+<div class="section">
+  <p class="callout">
+    Jump to:
+    <a href="#video">YouTube Video</a> •
+    <a href="#tableau">Tableau Visualization</a> •
+    <a href="#top">Top</a>
+  </p>
+</div>
 
-      <!-- Graduate students: add link to grad page (requirement if grad) -->
-      <a href="../grad.html">Graduate Page</a>
-    </nav>
-  </header>
-
-  <!-- On-page anchor target (requirement) -->
-  <div class="section">
-    <p class="callout">
-      Jump to: <a href="#tableau">Tableau Graph</a> • <a href="#video">YouTube Video</a> • <a href="#top">Top</a>
-    </p>
-  </div>
-
-  <!-- Anchor top -->
-  <a id="top"></a>
-
-  <div class="section grid">
-    <!-- DIV #1 -->
-    <div>
-      <h2>Why this topic matters to me</h2>
-      <p>
-        Write 3–6 sentences about your hobby/passion (sports, cooking, aviation, BYU experiences, etc.).
-        This page proves you can write HTML + CSS from scratch.
-      </p>
-
-      <!-- Nested list requirement: unordered list embedded in ordered list -->
-      <h3>My Learning Plan (Nested Lists)</h3>
-      <ol>
-        <li>Start with basics
-          <ul>
-            <li>Vocabulary</li>
-            <li>Tools and setup</li>
-            <li>Safety / best practices</li>
-          </ul>
-        </li>
-        <li>Practice weekly
-          <ul>
-            <li>Small weekly goals</li>
-            <li>Track progress</li>
-          </ul>
-        </li>
-        <li>Build a portfolio project</li>
-      </ol>
-    </div>
-
-    <!-- DIV #2 -->
-    <div>
-      <h2>Custom Image</h2>
-      <!-- At least one image NOT from Bootstrap theme (requirement) -->
-      <img class="custom-photo" src="../images/hobby.jpg" alt="My hobby image">
-      <p class="callout">
-        This image is stored locally in the project’s <strong>images/</strong> folder.
-      </p>
-    </div>
-  </div>
-
-  <!-- DIV #3 -->
-  <div class="section" id="video">
-    <h2>YouTube Video Embed</h2>
-    <p>Replace the YouTube ID below with a video related to your topic.</p>
-
-    <!-- Embedded YouTube video (requirement) -->
-    <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px;">
-      <iframe
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        title="YouTube video"
-        style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-
-  <div class="section" id="tableau">
-    <h2>Live Interactive Tableau Graph</h2>
+<div class="section grid">
+  <div>
+    <h2>Topic</h2>
     <p>
-      Requirement: must be a <strong>live embed</strong>, not an image.
-      Below is a template. You must paste your Tableau “Share” embed code here.
+      This page is built from a blank HTML file and uses a custom stylesheet created from scratch.
+      It demonstrates lists, anchors, media embeds, layout divs, and a live interactive Tableau visualization.
     </p>
 
-    <!-- Tableau embed template (replace with real embed code) -->
-    <div class="callout">
-      <strong>How to get it:</strong>
-      On a public Tableau viz → Share → Embed Code → copy/paste here.
-    </div>
-
-    <!-- START: Example Tableau Public embed (replace with your chosen viz) -->
-    <div class='tableauPlaceholder' id='viz1700000000000' style='position: relative;'>
-      <noscript>
-        <a href='#'><img alt='Tableau Viz'
-          src='https://public.tableau.com/static/images/RE/REPLACEME/1_rss.png'
-          style='border:none' /></a>
-      </noscript>
-      <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='REPLACEME/Sheet1' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/RE/REPLACEME/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object>
-    </div>
-    <script type='text/javascript'
-      src='https://public.tableau.com/javascripts/api/viz_v1.js'></script>
-    <!-- END: Example Tableau Public embed -->
-
-    <p class="callout">
-      Once you paste a real embed, test it on GitHub Pages to ensure it loads and is interactive.
-    </p>
-
-    <!-- On-page anchor link back to top -->
-    <p><a href="#top">Back to top ↑</a></p>
+    <h3>Learning Plan (Nested Lists)</h3>
+    <!-- Ordered list containing an unordered list (requirement) -->
+    <ol>
+      <li>Plan
+        <ul>
+          <li>Choose a topic</li>
+          <li>Write clean HTML structure</li>
+          <li>Design readable CSS</li>
+        </ul>
+      </li>
+      <li>Build
+        <ul>
+          <li>Add images + embeds</li>
+          <li>Test navigation + anchors</li>
+        </ul>
+      </li>
+      <li>Publish (GitHub Pages)</li>
+    </ol>
   </div>
 
-  <footer>
-    <small>Scratch page built from a blank file with custom CSS.</small>
-  </footer>
+  <div>
+    <h2>Custom Image</h2>
+    <img class="custom-photo" src="../images/hobby.jpg" alt="Custom image for scratch page">
+    <p class="callout">This image is loaded from the local <strong>images/</strong> folder (not a Bootstrap theme image).</p>
+  </div>
+</div>
+
+<div class="section" id="video">
+  <h2>YouTube Video</h2>
+  <p class="callout">
+    Video source:
+    <a href="https://youtu.be/hTqxfkWRimk?si=S-JYqULaV7cfVfDB" target="_blank" rel="noopener">
+      Open on YouTube
+    </a>
+  </p>
+
+  <!-- Responsive YouTube embed -->
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:10px;">
+    <iframe
+      src="https://www.youtube.com/embed/hTqxfkWRimk"
+      title="YouTube video"
+      style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <p><a href="#top">Back to top ↑</a></p>
+</div>
+
+<div class="section" id="tableau">
+  <h2>Live Interactive Tableau Public Visualization</h2>
+
+  <p class="callout">
+    Tableau Public link:
+    <a href="https://public.tableau.com/app/profile/irogementi.covenant/viz/covenantproject/Chart1"
+       target="_blank" rel="noopener">
+      View on Tableau Public
+    </a>
+  </p>
+
+  <!-- Tableau embed (interactive) -->
+  <div class="tableauPlaceholder" id="viz_covenantproject_chart1" style="position: relative;">
+    <noscript>
+      <a href="https://public.tableau.com/app/profile/irogementi.covenant/viz/covenantproject/Chart1" target="_blank" rel="noopener">
+        <img alt="Tableau Visualization"
+             src="https://public.tableau.com/static/images/co/covenantproject/Chart1/1_rss.png"
+             style="border:none; width:100%;" />
+      </a>
+    </noscript>
+
+    <object class="tableauViz" style="display:none;">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+      <param name="embed_code_version" value="3" />
+      <param name="site_root" value="" />
+      <param name="name" value="covenantproject/Chart1" />
+      <param name="tabs" value="no" />
+      <param name="toolbar" value="yes" />
+      <param name="static_image" value="https://public.tableau.com/static/images/co/covenantproject/Chart1/1.png" />
+      <param name="animate_transition" value="yes" />
+      <param name="display_static_image" value="yes" />
+      <param name="display_spinner" value="yes" />
+      <param name="display_overlay" value="yes" />
+      <param name="display_count" value="yes" />
+      <param name="language" value="en-US" />
+    </object>
+  </div>
+
+  <script src="https://public.tableau.com/javascripts/api/viz_v1.js"></script>
+
+  <p><a href="#top">Back to top ↑</a></p>
+</div>
+
+<footer>
+  <small>Scratch page built from scratch with custom CSS, YouTube embed, and Tableau Public embed.</small>
+</footer>
 
 </body>
 </html>
